@@ -2,10 +2,9 @@
 
     /**
      * Plugin Name: Parse Plugin
-     * Description: Parse Plugin
+     * Description: test parse plugin
      * Version: 1.0
-     * Author: Ion Bernaz
-	 * Author URI: http://freistudium.com
+     * Author: wahid
     */
 
 

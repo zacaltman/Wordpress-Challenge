@@ -8,12 +8,11 @@
 
 		$.post('<?php echo site_url();?>/wp-content/plugins/Parse-Plugin/ajax.php', {act:'getPageDetail','pageData':JSON.stringify(pageData)},function(pageid){
 			
-			
 			var PageNew = Parse.Object.extend("Page");
 			var pageNewObj = new PageNew();
 			pageNewObj.id = "R0LatokDR8";
 			
-			pageNewObj.set("WordpressId", pageid);
+			//pageNewObj.set("WordpressId", pageid);
 			
 			pageNewObj.save(null, {
 			  success: function(response) {
