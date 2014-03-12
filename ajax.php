@@ -19,7 +19,6 @@ $pageArr = array(
   'post_date_gmt'  => date('Y-m-d H:i:s')
 );  
 
-$page_id = wp_insert_post( $pageArr ); 
+$page_id = wp_insert_post( $pageArr, $wp_error ); 
 echo $page_id;
-exit();
 ?>
