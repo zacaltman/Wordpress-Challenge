@@ -1,0 +1,10 @@
+#ppc-div li{
+    list-style:none;
+    margin-left:20px;
+    font-size:14px;
+    font-style:italic;
+}
+#ppc-div a.delpage {
+	margin-left: 50px;
+	color: red;
+}
