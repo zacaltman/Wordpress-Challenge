@@ -1,14 +1,14 @@
 <?php
 require_once('../../../wp-load.php');
 
-$pageData = $_REQUEST['pageData'];
+$pageData = stripslashes($_REQUEST['pageData']);
 $pageData = json_decode( $pageData, true );
 
 global $wpdb;
 
 
 $pageArr = array(
-  'post_content'   => stripslashes($pageData['content']),
+  'post_content'   => $pageData['content'],
   'post_name'      => $pageData['url'],
   'post_title'     => $pageData['title'],
   'post_status'    => 'publish',
