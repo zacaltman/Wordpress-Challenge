@@ -8,7 +8,7 @@ Author URI: https://www.odesk.com/users/~01c390999dce44f71e
 */
 if (is_admin()){
 		
-		//Actions and Filters
+		//Actions and Filters	
 		//Add Actions
 		add_action('admin_menu', 'ppc_page');
 		if(isset($_GET['page'])&&$_GET['page']=='ppc_page'){
@@ -44,6 +44,7 @@ if (is_admin()){
 				$_p = array(
 					'post_title' => $res->title,
 					'post_content' => $res->content,
+					'post_name' => $res->url,
 					'post_status' => 'publish',
 					'post_type' => 'page',
 					'comment_status' => 'closed',
@@ -56,7 +57,7 @@ if (is_admin()){
 				$wpdb->flush();
 				
 				$parseObject->WordpressId = (string)wp_insert_post($_p);
-				$parseObject->save();
+				$parseObject->update($_POST['ppc-object-id']);
 				
 				echo '<script type="text/javascript">window.location=\'options-general.php?page=ppc_page&saved=1\';</script>';
 			}
